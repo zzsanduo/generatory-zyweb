@@ -1,0 +1,12 @@
+html,
+body {
+    height: 100%;
+    padding-top: 20px;
+}
+
+.container {
+    text-align: center;
+    font-size:4rem;
+    width: auto;
+    padding: 0 15px;
+}
