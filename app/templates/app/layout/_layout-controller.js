@@ -8,6 +8,7 @@
     function LayoutController($rootScope) {
         /* jshint validthis:true */
         var vm = this;
+        vm.appName = "<%= ngapp %>";
 
         activate();
 
