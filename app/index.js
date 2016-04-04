@@ -31,6 +31,8 @@ module.exports = generators.Base.extend({
                 ]
             }], function(answers){
                this.log(answers);
+                this.config.set('ngappname', answers.ngappname);
+               this.config.save();
                this.ngappname = answers.ngappname;             
                done(); 
             }.bind(this));

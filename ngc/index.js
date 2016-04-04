@@ -13,9 +13,6 @@ module.exports = generators.Base.extend({
 
   },
     initializing: function () {
-        this.log('inside ngc sub-generator', this);
-        
-
         this.option('view', {
             desc: 'Determines if view is created along with controller',
             type: Boolean,
@@ -24,6 +21,7 @@ module.exports = generators.Base.extend({
     },
     
     writing: function(){
+        console.log("appName",this.config.get('ngappname'));
         this.fs.copyTpl(
             this.templatePath('ng-controller.js'),
             this.destinationPath('app/' + this.ctrlName.toLowerCase() + '/' + this.ctrlName.toLowerCase() + '-controller.js'),
