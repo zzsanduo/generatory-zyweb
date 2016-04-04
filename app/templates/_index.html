@@ -1,20 +1,31 @@
 <!doctype html>
-<html>
+<html ng-app="<%= ngapp %>">
 
 <head>
     <meta charset="utf-8">
-    <title>HelloWebgo</title>
+    <title><%= ngapp %></title>
     <link rel="icon" type="image/x-icon" href="favicon.ico">
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link type="text/css" rel="stylesheet" href="bower_components/bootstrap-css-only/css/bootstrap.css"></link>
     <link type="text/css" rel="stylesheet" href="styles/main.css"></link>
 </head>
 <body>
-<section class="container">
-    Hello, Webgo!
-</section>
-        
+
+<div id="applicationHost" class="container body-content admin-appHost">
+        <div data-ng-include="'/app/layout/layout.tpl.html'"></div>
+    </div>
+
+        <script src="bower_components/angular/angular.min.js"></script>
       
+        <script src="bower_components/angular-bootstrap/ui-bootstrap.min.js"></script>
+        <script src="bower_components/angular-ui-router/release/angular-ui-router.min.js"></script>
+      
+      <script src="app/app.js"></script>
+      <script src="app/layout/layout-controller.js"></script>
+      <script src="app/home/home-controller.js"></script>
+      <script src="app/about/about-controller.js"></script>    
 </body>
 
 </html>
